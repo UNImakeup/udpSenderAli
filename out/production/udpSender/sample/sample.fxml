@@ -8,15 +8,15 @@
    <bottom>
       <BorderPane prefHeight="282.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <center>
-              <TableView prefHeight="225.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+              <TableView fx:id="tableViewLog" prefHeight="225.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                   <columns>
-                      <TableColumn text="Time" />
-                      <TableColumn text="From IP" />
-                      <TableColumn text="From Port" />
-                      <TableColumn text="To IP" />
-                      <TableColumn prefWidth="76.0" text="To Port" />
-                      <TableColumn prefWidth="199.0" text="ASCII" />
-                      <TableColumn minWidth="0.0" prefWidth="204.0" text="Hex" />
+                      <TableColumn fx:id="logColumnTime" text="Time" />
+                      <TableColumn fx:id="logColumnFromIp" text="From IP" />
+                      <TableColumn fx:id="logColumnFromPort" text="From Port" />
+                      <TableColumn fx:id="logColumnToIp" text="To IP" />
+                      <TableColumn fx:id="logColumnToPort" prefWidth="76.0" text="To Port" />
+                      <TableColumn fx:id="logColumnAscii" prefWidth="199.0" text="ASCII" />
+                      <TableColumn fx:id="logColumnHex" minWidth="0.0" prefWidth="204.0" text="HEX" />
                   </columns>
               </TableView>
          </center>
@@ -120,10 +120,14 @@
       </GridPane>
    </top>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableViewSavedPackages" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="Send" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="To Address" />
+            <TableColumn prefWidth="75.0" text="To Port" />
+            <TableColumn prefWidth="237.0" text="ASCII" />
+            <TableColumn prefWidth="262.0" text="HEX" />
         </columns>
       </TableView>
    </center>
