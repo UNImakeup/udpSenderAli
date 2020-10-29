@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/UdpPackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="adds UdpPackage class and combines with logTableView">
+      <change afterPath="$PROJECT_DIR$/src/sample/UdpPackageReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/udpSender/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/udpSender/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/udpSender/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/udpSender/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/UdpPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/UdpPackage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +59,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -191,8 +200,16 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1603788346513" duration="7596000" />
-      <workItem from="1603903655856" duration="6180000" />
+      <workItem from="1603903655856" duration="10755000" />
     </task>
+    <task id="LOCAL-00001" summary="adds UdpPackage class and combines with logTableView">
+      <created>1603917547712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603917547712</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,16 +218,19 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="adds UdpPackage class and combines with logTableView" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds UdpPackage class and combines with logTableView" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603788521619">
       <screen x="0" y="23" width="2507" height="1417" />
     </state>
     <state x="718" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.766.1440.900/0.23.2507.1417@0.23.2507.1417" timestamp="1603788521619" />
-    <state x="513" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1603904947651">
-      <screen x="0" y="23" width="1402" height="877" />
+    <state x="513" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1603917876539">
+      <screen x="0" y="23" width="1403" height="877" />
     </state>
     <state x="513" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1402.877@0.23.1402.877" timestamp="1603904947651" />
+    <state x="513" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1403.877@0.23.1403.877" timestamp="1603917876539" />
     <state x="413" y="23" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1603905488123">
       <screen x="0" y="23" width="1402" height="877" />
     </state>
@@ -219,34 +239,42 @@
       <screen x="0" y="23" width="1403" height="877" />
     </state>
     <state x="270" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1403.877@0.23.1403.877" timestamp="1603917245509" />
-    <state width="1359" height="211" key="GridCell.Tab.0.bottom" timestamp="1603917450686">
-      <screen x="0" y="23" width="1402" height="877" />
+    <state x="320" y="23" key="CommitChangelistDialog2" timestamp="1603917547408">
+      <screen x="0" y="23" width="1403" height="877" />
     </state>
+    <state x="320" y="23" key="CommitChangelistDialog2/0.23.1403.877@0.23.1403.877" timestamp="1603917547408" />
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom" timestamp="1603961747826">
+      <screen x="0" y="23" width="2504" height="1417" />
+    </state>
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom/-1440.766.1440.900/0.23.2504.1417@0.23.2504.1417" timestamp="1603961747826" />
     <state width="2465" height="389" key="GridCell.Tab.0.bottom/-1440.766.1440.900/0.23.2507.1417@0.23.2507.1417" timestamp="1603799863779" />
     <state width="2465" height="389" key="GridCell.Tab.0.bottom/-1440.766.1440.900/0.23.2508.1417@0.23.2508.1417" timestamp="1603792771132" />
-    <state width="1359" height="211" key="GridCell.Tab.0.bottom/0.23.1402.877@0.23.1402.877" timestamp="1603917450686" />
-    <state width="2465" height="389" key="GridCell.Tab.0.bottom/0.23.1403.877@0.23.1403.877" timestamp="1603903265529" />
-    <state width="1359" height="211" key="GridCell.Tab.0.center" timestamp="1603917450685">
-      <screen x="0" y="23" width="1402" height="877" />
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom/0.23.1402.877@0.23.1402.877" timestamp="1603921060052" />
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom/0.23.1403.877@0.23.1403.877" timestamp="1603918094407" />
+    <state width="1359" height="211" key="GridCell.Tab.0.center" timestamp="1603961747825">
+      <screen x="0" y="23" width="2504" height="1417" />
     </state>
+    <state width="1359" height="211" key="GridCell.Tab.0.center/-1440.766.1440.900/0.23.2504.1417@0.23.2504.1417" timestamp="1603961747825" />
     <state width="2465" height="389" key="GridCell.Tab.0.center/-1440.766.1440.900/0.23.2507.1417@0.23.2507.1417" timestamp="1603799863779" />
     <state width="2465" height="389" key="GridCell.Tab.0.center/-1440.766.1440.900/0.23.2508.1417@0.23.2508.1417" timestamp="1603792771130" />
-    <state width="1359" height="211" key="GridCell.Tab.0.center/0.23.1402.877@0.23.1402.877" timestamp="1603917450685" />
-    <state width="2465" height="389" key="GridCell.Tab.0.center/0.23.1403.877@0.23.1403.877" timestamp="1603903265529" />
-    <state width="1359" height="211" key="GridCell.Tab.0.left" timestamp="1603917450685">
-      <screen x="0" y="23" width="1402" height="877" />
+    <state width="1359" height="211" key="GridCell.Tab.0.center/0.23.1402.877@0.23.1402.877" timestamp="1603921060052" />
+    <state width="1359" height="211" key="GridCell.Tab.0.center/0.23.1403.877@0.23.1403.877" timestamp="1603918094406" />
+    <state width="1359" height="211" key="GridCell.Tab.0.left" timestamp="1603961747824">
+      <screen x="0" y="23" width="2504" height="1417" />
     </state>
+    <state width="1359" height="211" key="GridCell.Tab.0.left/-1440.766.1440.900/0.23.2504.1417@0.23.2504.1417" timestamp="1603961747824" />
     <state width="2465" height="389" key="GridCell.Tab.0.left/-1440.766.1440.900/0.23.2507.1417@0.23.2507.1417" timestamp="1603799863778" />
     <state width="2465" height="389" key="GridCell.Tab.0.left/-1440.766.1440.900/0.23.2508.1417@0.23.2508.1417" timestamp="1603792771130" />
-    <state width="1359" height="211" key="GridCell.Tab.0.left/0.23.1402.877@0.23.1402.877" timestamp="1603917450685" />
-    <state width="2465" height="389" key="GridCell.Tab.0.left/0.23.1403.877@0.23.1403.877" timestamp="1603903265527" />
-    <state width="1359" height="211" key="GridCell.Tab.0.right" timestamp="1603917450685">
-      <screen x="0" y="23" width="1402" height="877" />
+    <state width="1359" height="211" key="GridCell.Tab.0.left/0.23.1402.877@0.23.1402.877" timestamp="1603921060051" />
+    <state width="1359" height="211" key="GridCell.Tab.0.left/0.23.1403.877@0.23.1403.877" timestamp="1603918094406" />
+    <state width="1359" height="211" key="GridCell.Tab.0.right" timestamp="1603961747825">
+      <screen x="0" y="23" width="2504" height="1417" />
     </state>
+    <state width="1359" height="211" key="GridCell.Tab.0.right/-1440.766.1440.900/0.23.2504.1417@0.23.2504.1417" timestamp="1603961747825" />
     <state width="2465" height="389" key="GridCell.Tab.0.right/-1440.766.1440.900/0.23.2507.1417@0.23.2507.1417" timestamp="1603799863779" />
     <state width="2465" height="389" key="GridCell.Tab.0.right/-1440.766.1440.900/0.23.2508.1417@0.23.2508.1417" timestamp="1603792771131" />
-    <state width="1359" height="211" key="GridCell.Tab.0.right/0.23.1402.877@0.23.1402.877" timestamp="1603917450685" />
-    <state width="2465" height="389" key="GridCell.Tab.0.right/0.23.1403.877@0.23.1403.877" timestamp="1603903265529" />
+    <state width="1359" height="211" key="GridCell.Tab.0.right/0.23.1402.877@0.23.1402.877" timestamp="1603921060052" />
+    <state width="1359" height="211" key="GridCell.Tab.0.right/0.23.1403.877@0.23.1403.877" timestamp="1603918094406" />
     <state x="378" y="63" key="SettingsEditor" timestamp="1603916498895">
       <screen x="0" y="23" width="1402" height="877" />
     </state>
@@ -266,7 +294,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/sample/UdpPackage.java</url>
-          <line>43</line>
+          <line>48</line>
           <properties class="sample.UdpPackage" method="getDataAsBytes">
             <option name="EMULATED" value="true" />
           </properties>

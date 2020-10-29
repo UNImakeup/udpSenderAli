@@ -3,12 +3,13 @@ package sample;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableListBase;
+import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.io.IOException;
+import java.net.*;
 
 public class Controller {
 
@@ -23,6 +24,9 @@ public class Controller {
 
     private ObservableList<UdpPackage> savedPackages = FXCollections.observableArrayList();
     private ObservableList<UdpPackage> loggedPackages = FXCollections.observableArrayList();
+
+    private UdpPackageReceiver receiver;
+    private DatagramSocket sender;
 
     public void initialize() throws UnknownHostException {
         System.out.println("creates list of packages");
@@ -56,5 +60,31 @@ public class Controller {
         logColumnToIp.setCellValueFactory(
                 new PropertyValueFactory<UdpPackage, String>("toIp")
         );
+
+        //add udp server/reeciver
+        receiver = new UdpPackageReceiver(loggedPackages, 6000);
+        new Thread(receiver).start();
+
+        //create udp sender
+        try {
+            sender = new DatagramSocket();
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void sendUdpMessage(ActionEvent actionEvent) {
+
+        // sends a basic test message to localhost port 4000!
+
+        String message = "test message";
+        DatagramPacket packet = null;
+        try {
+            packet = new DatagramPacket(message.getBytes(), message.length(), InetAddress.getByName("127.0.0.1"), 4000);
+            sender.send(packet);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
