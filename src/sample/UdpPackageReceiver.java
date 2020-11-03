@@ -6,7 +6,7 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 import java.util.List;
 
-public class UdpPackageReceiver implements Runnable{
+public class UdpPackageReceiver implements Runnable{ //Den implementerer runnable
 
     boolean running = false;
     DatagramSocket socket;
@@ -34,7 +34,7 @@ public class UdpPackageReceiver implements Runnable{
     public void run() {
         while (running)
         {
-            DatagramPacket packet = new DatagramPacket(buf, buf.length);
+            DatagramPacket packet = new DatagramPacket(buf, buf.length); //Han laver sin egen package
             try {
                 socket.receive(packet);
                 System.out.println("package arrived!");

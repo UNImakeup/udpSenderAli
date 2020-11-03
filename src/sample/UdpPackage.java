@@ -33,6 +33,20 @@ public class UdpPackage {
         this.setDate(new Date(System.currentTimeMillis()));
     }
 
+    public InetAddress getToAdd(){
+        return toIp;
+    }
+
+    public String getASCII(){
+        return getDataAsString();
+
+    }
+
+    public String getHEX(){
+        return getDataAsHex();
+    }
+
+
     public String getFormattedDate()
     {
         return formatter.format(date);

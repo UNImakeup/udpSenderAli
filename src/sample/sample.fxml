@@ -85,7 +85,7 @@
             </FlowPane>
             <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <TextField prefHeight="27.0" prefWidth="685.0" />
+                  <TextField fx:id="ASCII" prefHeight="27.0" prefWidth="685.0" />
                </children>
             </FlowPane>
             <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -111,7 +111,7 @@
                      <FlowPane.margin>
                         <Insets right="12.0" />
                      </FlowPane.margin></Button>
-                  <Button mnemonicParsing="false" text="Save">
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save">
                      <FlowPane.margin>
                         <Insets right="12.0" />
                      </FlowPane.margin></Button>
@@ -122,12 +122,12 @@
    <center>
       <TableView fx:id="tableViewSavedPackages" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="Send" />
-          <TableColumn prefWidth="75.0" text="Name" />
-            <TableColumn prefWidth="75.0" text="To Address" />
-            <TableColumn prefWidth="75.0" text="To Port" />
-            <TableColumn prefWidth="237.0" text="ASCII" />
-            <TableColumn prefWidth="262.0" text="HEX" />
+          <TableColumn fx:id="logColSend" prefWidth="75.0" text="Send" />
+          <TableColumn fx:id="logColName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="logColToAdd" prefWidth="75.0" text="To Address" />
+            <TableColumn fx:id="logColToPort" prefWidth="75.0" text="To Port" />
+            <TableColumn fx:id="logColASCII" prefWidth="237.0" text="ASCII" />
+            <TableColumn fx:id="logColHEX" prefWidth="262.0" text="HEX" />
         </columns>
       </TableView>
    </center>
