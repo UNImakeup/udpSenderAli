@@ -80,7 +80,7 @@
                </GridPane.margin></Label>
             <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField prefHeight="27.0" prefWidth="371.0" />
+                  <TextField fx:id="Name" prefHeight="27.0" prefWidth="371.0" />
                </children>
             </FlowPane>
             <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -103,7 +103,7 @@
                      <FlowPane.margin>
                         <Insets right="12.0" />
                      </FlowPane.margin></Label>
-                  <TextField prefHeight="27.0" prefWidth="77.0">
+                  <TextField fx:id="ToPort" prefHeight="27.0" prefWidth="77.0">
                      <FlowPane.margin>
                         <Insets right="12.0" />
                      </FlowPane.margin></TextField>

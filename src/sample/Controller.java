@@ -33,6 +33,8 @@ public class Controller {
     public TableColumn logColHEX;
     public TableView tableViewSavedPackages;
     public Button saveButton;
+    public TextField Name;
+    public TextField ToPort;
 
 
     private ObservableList<UdpPackage> savedPackages = FXCollections.observableArrayList(); //Er vist nemmere at tilføje ting end arraylist, derfor den bruges(?)
@@ -120,13 +122,19 @@ public class Controller {
         }
     } //Grunden til at vi har multithreading er at den applicationen skal køre selv om den anden kører.
 
-    public void saveButtonClicked(ActionEvent actionEvent) {
+    public void saveButtonClicked(ActionEvent actionEvent) throws UnknownHostException {
         /*når knappen bliver klikket skal vi sætte inputtet fra de forskellige ind i de forskellige felter. Tror vi skal lave ligesom nedenstående
             UdpPackage test2 = new UdpPackage("name", "hello world", InetAddress.getByName("127.0.0.1"), InetAddress.getByName("127.0.0.1"), 4000,4000);
         UdpPackage test3 = new UdpPackage("command", "hola", InetAddress.getByName("127.0.0.1"), InetAddress.getByName("127.0.0.1"), 4000, 4000);
         loggedPackages.addAll(test1, test2);
         savedPackages.addAll(test2, test3);
     * */
+        String asciiText = ASCII.getText();
+        String name = Name.getText();
+        int toPort = Integer.parseInt(ToPort.getText());
+        UdpPackage save = new UdpPackage(name, asciiText, InetAddress.getByName("127.0.0.1"), InetAddress.getByName("127.0.0.1"), 4000, toPort);
+        savedPackages.add(save);
+
     }
 
 }
