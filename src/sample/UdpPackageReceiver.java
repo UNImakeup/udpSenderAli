@@ -13,7 +13,7 @@ public class UdpPackageReceiver implements Runnable{ //Den implementerer runnabl
     private byte[] buf = new byte[256];
     int port;
 
-    List udpPackages;
+    List<UdpPackage> udpPackages;
 
     public UdpPackageReceiver(List udpPackages, int port) {
         this.running = true;
@@ -37,9 +37,15 @@ public class UdpPackageReceiver implements Runnable{ //Den implementerer runnabl
             DatagramPacket packet = new DatagramPacket(buf, buf.length); //Han laver sin egen package
             try {
                 socket.receive(packet);
-                System.out.println("package arrived!");
+                //System.out.println("package arrived!");
                 UdpPackage udpPackage = new UdpPackage("name", packet.getData(), packet.getAddress(), socket.getLocalAddress(), packet.getPort(), socket.getLocalPort());
                 udpPackages.add(udpPackage);
+                System.out.println(udpPackage.getASCII());
+                byte[] a = packet.getData();
+                //String b = (byte)
+                if (a == udpPackage.getDataAsBytes()){
+                    System.out.println("up");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

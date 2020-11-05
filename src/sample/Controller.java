@@ -53,7 +53,6 @@ public class Controller {
         loggedPackages.addAll(test1, test2);
         savedPackages.addAll(test2, test3);
 
-
         //han har lavet lower table, vi skal lave lignende på upper table.
         //add list of items to table
         tableViewLog.setItems(loggedPackages); //tableview sætter han items til observablelist. Den opdaterer automatisk, fordi den er observable.
@@ -93,6 +92,7 @@ public class Controller {
         //add udp server/reeciver
         receiver = new UdpPackageReceiver(loggedPackages, 6000);
         new Thread(receiver).start(); //Starter ss thread. Den skal altså køre i sin egen seperate thread. Serveren og applicationen kører i hver sin thread. For at køre i en thread skal man følge nogle regler, der er beskrevet i en interface der bruges.
+        //receiveUdpMessage();
 
         //create udp sender
         try {
@@ -100,6 +100,7 @@ public class Controller {
         } catch (SocketException e) {
             e.printStackTrace();
         } //sende beskeder(?)
+
 
     }
 
@@ -136,5 +137,33 @@ public class Controller {
         savedPackages.add(save);
 
     }
+
+    public void receiveUdpMessage (){ //metode jeg selv lavede.
+
+        //UdpPackage udp = (UdpPackage) receiver.udpPackages.get(receiver.udpPackages.lastIndexOf(receiver.udpPackages));
+        while(receiver.running) {
+            UdpPackage udp = (UdpPackage) receiver.udpPackages.get(0);
+            System.out.println(udp.getASCII());
+            System.out.println(udp.getDataAsString());
+            System.out.println(udp.getName());
+        }
+        //receiver.run(); //Lige nu modtager den inde i programmet, hvilket er lidt mærkeligt, men fair.
+
+
+        //System.out.println(receiver.getUdpPackages().get(1));
+        //receiver.udpPackages.get(0).getDataAsString();
+
+       /*
+        if(receiver.running==true){
+            System.out.println(receiver.udpPackages.get(receiver.udpPackages.lastIndexOf(receiver)).toString()); //kan se jeg får en besked, men ved ikke hvordan jeg viser den.
+        }
+
+        */
+        //System.out.println(receiver.udpPackages.get(receiver.udpPackages.lastIndexOf(receiver.udpPackages)));
+        //if() //Vil prøve at print beskeden der sendes for at forstå det, og så man kan lave if statements med det og dermed har commands til drone emulatoren.
+
+    }
+
+
 
 }
