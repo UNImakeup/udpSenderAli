@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
+import java.util.Arrays;
 import java.util.List;
 
 public class UdpPackageReceiver implements Runnable{ //Den implementerer runnable
@@ -34,6 +35,7 @@ public class UdpPackageReceiver implements Runnable{ //Den implementerer runnabl
     public void run() {
         while (running)
         {
+            buf = new byte[256];
             DatagramPacket packet = new DatagramPacket(buf, buf.length); //Han laver sin egen package
             try {
                 socket.receive(packet);
@@ -41,9 +43,12 @@ public class UdpPackageReceiver implements Runnable{ //Den implementerer runnabl
                 UdpPackage udpPackage = new UdpPackage("name", packet.getData(), packet.getAddress(), socket.getLocalAddress(), packet.getPort(), socket.getLocalPort());
                 udpPackages.add(udpPackage);
                 System.out.println(udpPackage.getASCII());
-                byte[] a = packet.getData();
-                //String b = (byte)
-                if (a == udpPackage.getDataAsBytes()){
+
+                String b = "a";
+                //byte[] a = b.getBytes();
+                String msg = new String(packet.getData()).trim();
+
+                if (b.equals(msg)){
                     System.out.println("up");
                 }
             } catch (IOException e) {
